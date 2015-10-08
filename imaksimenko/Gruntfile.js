@@ -1,13 +1,21 @@
-'use strict';
-
 module.exports = function(grunt) {
-  require('load-grunt-tasks')(grunt);
-
-  var config = {
-    pkg: grunt.file.readJSON('package.json')
-  };
-
-  config = require('./.gosha')(grunt, config);
-
-  grunt.initConfig(config);
-};
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    sass: {
+      dist: {
+        files: {
+          'style/style.css' : 'sass/sass.scss'
+        }
+      }
+    },
+    watch: {
+      css: {
+        files: ['sass/**/*.scss', 'sass/*.scss'],
+        tasks: ['sass']
+      }
+    }
+  });
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.registerTask('default',['sass', 'watch']);
+}

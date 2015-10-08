@@ -1,0 +1,160 @@
+.main{
+  font-size: 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  &__triangle{
+    display: inline-block;
+    height: 16px;
+    width: 320px;
+    background: #81b3d2 url('../img/triangle-bottom.png') bottom center no-repeat;
+  }
+}
+
+.benefit{
+  font-size: 14px;
+
+  &__img{
+    margin: 0 auto;
+    width: 320px;
+    height: 255px;
+    background: url('../img/photo1.jpg') top center no-repeat;
+  }
+
+  &--short{
+    .benefit-head{
+      background-color: #eeeeee;
+      color: #000000;
+      
+
+      &::after{
+        content: '';
+        display: block;
+        height: 0;
+        width: 280px;
+        border-bottom: 1px solid #d6d6d6;
+      }
+    }
+  }
+}
+
+.benefit--short:nth-last-of-type(1){
+  .benefit-head::after{
+    border-bottom: none;
+  }
+}
+
+.benefit:nth-of-type(2){
+  .benefit__img{
+    background: url('../img/photo2.jpg') top center no-repeat;
+  }
+}
+
+.benefit-head{
+  background-color: #81b3d2;
+  color: #ffffff;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 280px;
+  margin: 0 auto;
+
+  &__header{
+    padding-top: 42px;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0;
+  }
+
+  &__number{
+    padding-top: 8px;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0;
+  }
+
+  &__desc{
+    padding-top: 12px;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0;
+    padding-bottom: 41px;
+  }
+}
+
+.benefit-list{
+  clear: both;
+  padding-top: 11px;
+  padding-left: 0px;
+  padding-bottom: 28px;
+  box-sizing: border-box;
+  width: 320px;
+  text-align: left;
+  list-style-type: none;
+  margin: 0 auto;
+  
+  &__item{
+    padding-left: 70px;
+    padding-right: 20px;
+    position: relative;
+  }
+
+  &__ico{
+    top: 18px;
+    left: 21px;
+    position: absolute;
+  }
+
+  &__header{
+    font-size: 18px;
+    line-height: 26px;
+    padding-top: 29px;
+    vertical-align: top;
+    display: inline-block;
+    margin: 0;
+  }
+
+  &__desc{
+    font-size: 14px;
+    line-height: 21px;
+    padding-top: 19px;
+    vertical-align: top;
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+.interested{
+  font-size: 14px;
+  width: 320px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 48px;
+  padding-top: 28px;
+  box-sizing: border-box;
+
+  &__header{
+    font-weight: 700;
+    margin: 0;
+    font-size: 21px;
+    line-height: 26px;
+    padding-bottom: 20px;
+  }
+
+  &__desc{
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px; 
+    padding-bottom: 36px;
+  }
+}
+
+.map{
+  margin: 0 auto;
+  width: 320px;
+
+  iframe{
+    width: 320px;
+    height: 350px;
+  }
+}

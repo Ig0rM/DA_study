@@ -1,0 +1,50 @@
+.footer{
+  font-size: 0;
+  padding-top: 33px;
+  padding-bottom: 23px;
+  text-align: center;
+}
+
+.tags{
+  vertical-align: top;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.social-list{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 36px;
+
+  &__item{
+    cursor: pointer;
+    margin-right: 6px;
+    display: inline-block;
+    background-color: #81b3d2;
+    width: 46px;
+    height: 48px;
+    
+    &:last-of-type{
+      margin-right: 0px
+    }
+
+    .ico{
+      margin-top: 12px;
+    }
+  }
+}
+
+.dev-by{
+  text-transform: uppercase;
+  padding-top: 39px;
+  font-size: 14px;
+  line-height: 28px;
+
+  .ico{
+    margin-left: 5px;
+  }
+}

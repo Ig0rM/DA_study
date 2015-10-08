@@ -1,0 +1,22 @@
+@import "normalize";
+@import "variables";
+@import "buttons";
+@import "icons";
+@import "general/header";
+@import "general/main";
+@import "general/footer";
+@import "form/form-main";
+
+body{
+  font-family: 'PT Sans', sans-serif;
+} 
+
+.clearfix::before,
+.clearfix::after{
+  content: "";
+  display: table;
+}
+
+.clearfix::after{
+  clear: both;
+}

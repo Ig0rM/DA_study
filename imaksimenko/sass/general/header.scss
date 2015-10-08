@@ -1,0 +1,110 @@
+.header{
+  min-width: 320px;
+  text-transform: uppercase;
+
+  &__show-nav-wrap{
+    padding-top: (55px-22px)/2;
+    padding-bottom: (55px-22px)/2;
+
+    .ico-show-menu{
+      float: right;
+      margin-right: 20px;
+    }
+  }
+
+  &__img{
+    width: 320px;
+    margin: auto;
+    background: url('../img/triangles.png') bottom center no-repeat,
+                url('../img/bg-header.jpg') top center no-repeat;
+    text-align: center;
+  }
+
+  &__logo-welcome{
+    vertical-align: top;
+    margin-top: 47px;
+    display: inline-block;
+    background: url('../img/welcome-logo.png') no-repeat center center;
+    width: 100%;
+    height: 66px;
+  }
+
+  &__logo-sedona{
+    vertical-align: top;
+    margin-top: 60px;
+    display: inline-block;
+    background: url('../img/sedona-logo.png') no-repeat center center;
+    width: 100%;
+    height: 48px;
+  }
+
+  &__logo-quote{
+    vertical-align: top;
+    margin-top: 68px;
+    margin-bottom: 46px;
+    display: inline-block;
+    background: url('../img/quote-logo.png') no-repeat center center;
+    width: 100%;
+    height: 54px;
+  }
+
+  &__about-sedona{
+    padding-top: 40px;
+    padding-bottom: 28px;
+    width: 256px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__desc-header{
+    margin: 0;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  &__desc{
+    padding-top: 23px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+
+.upper-navigation{
+  position: relative;
+  font-size: 0px;
+  text-align: center;
+
+  &__list{
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item{
+    color: #ffffff;
+    background-color: #81b3d2;
+    padding-top: (55px - 18px)/2;
+    padding-bottom: (55px - 18px)/2;
+    width: 100%;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 18px;
+    border-bottom: 1px solid #678fa8;
+    box-shadow: inset 0px 1px 1px 0px rgba(154, 194, 219, 1);
+
+    &:last-of-type{
+      box-shadow: inset 0px 1px 1px 0px rgba(154, 194, 219, 1),
+                  inset 0px -1px 6px 0px rgba(0, 0, 0, .1);
+    }
+  }
+
+  .ico-close{
+    position: absolute;
+    right: 20px;
+  }
+
+  .ico-nav-logo{
+    margin-left: -(138px/2);
+    position: absolute;
+  }
+}

@@ -1,0 +1,49 @@
+.response-header{
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  
+  &__img{
+    width: 320px;
+    background-image: url('../img/triangles.png'),
+                      url('../img/bg-header.jpg');
+    background-size: auto, cover;
+    background-position: bottom center, 0 100%;
+    background-repeat: no-repeat, no-repeat;
+    height: 158px;
+    margin: 0 auto;
+  }
+
+  &__logo-sedona{
+    vertical-align: top;
+    margin-top: 50px;
+    display: inline-block;
+    background: url('../img/sedona-logo.png') no-repeat center center;
+    width: 175px;
+    height: 30px;
+    background-size: cover;
+  }
+
+  &__about-sedona{
+    box-sizing: border-box;
+    padding-top: 68px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  &__desc-header{
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0;
+  }
+
+  &__desc{
+    padding-top: 30px;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+  }
+}

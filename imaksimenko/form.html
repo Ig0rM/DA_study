@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: sedona</title>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:700,400,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style/style.css">
     <!-- <link rel="stylesheet" href="css/style.css"> -->
   </head>
   <body>
@@ -10,23 +12,17 @@
     <header class="header">
       <nav class="upper-navigation">
         <ul class="upper-navigation__list">
-          <li class="upper-navigation__item">Карта штата<span class="btn-close"></span></li>
+          <li class="upper-navigation__item">Карта штата<i class="ico-close"></i></li>
           <li class="upper-navigation__item">Информация</li>
           <li class="upper-navigation__item">Фото и видео</li>
           <li class="upper-navigation__item">Гостиницы</li>
         </ul>
+        <i class="ico-nav-logo"></i>
       </nav>
-      <section class="header__img">
-        <div class="header__logo">
-          <span class="header__logo-welcome"></span>
-          <span class="header__logo-sedona"></span>
-          <span class="header__logo-quote"></span>
-        </div>
-      </section>
-      <section class="header__about-sedona">
-        <h1 class="header__desc-header">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
-        <p class="header__desc">Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон!</p>
-      </section>
+      <div class="header__show-nav-wrap clearfix">
+        <i class="ico-show-menu"></i>
+      </div>
+      
     </header>
 
 
@@ -34,6 +30,16 @@
 
 
     <main class="response">
+      <section class="response-header">
+        <div class="response-header__img">
+          <span class="response-header__logo-sedona"></span>
+        </div>
+        <div class="response-header__about-sedona">
+          <h1 class="response-header__desc-header">Оставьте свой отзыв</h1>
+          <p class="response-header__desc">Помогите нашим отелям стать лучше! Оставьте отзывы о них, а также о посещенных Вами достопримечательностях</p>
+        </div>
+      </section>
+
       <form class="response-form" name="response-form">
         <fieldset class="person">
           <h2 class="person__head">Представьтесь, пожалуйста:</h2>
@@ -141,11 +147,11 @@
     <footer class="footer">
       <span class="tags">#visitsedona</span>
       <ul class="social-list">
-        <li class="social-list__item"></li>
-        <li class="social-list__item"></li>
-        <li class="social-list__item"></li>
+        <li class="social-list__item"><i class="ico ico-tw"></i></li>
+        <li class="social-list__item"><i class="ico ico-fb"></i></li>
+        <li class="social-list__item"><i class="ico ico-youtube"></i></li>
       </ul>
-      <div class="dev-by">Разработано <span class="dev-by__logo"></span></div>
+      <div class="dev-by">Разработано <span class="ico ico-devby"></span></div>
     </footer>
     <!-- <script src="js/script.js"></script> -->
 

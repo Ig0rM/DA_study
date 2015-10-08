@@ -3,25 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: sedona</title>
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:700,400,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style/style.css">
   </head>
   <body>
 
     <header class="header">
       <nav class="upper-navigation">
         <ul class="upper-navigation__list">
-          <li class="upper-navigation__item">Карта штата<span class="btn-close"></span></li>
+          <li class="upper-navigation__item">Карта штата<i class="ico-close"></i></li>
           <li class="upper-navigation__item">Информация</li>
           <li class="upper-navigation__item">Фото и видео</li>
           <li class="upper-navigation__item">Гостиницы</li>
         </ul>
+        <i class="ico-nav-logo"></i>
       </nav>
+      <div class="header__show-nav-wrap clearfix">
+        <i class="ico-show-menu"></i>
+      </div>
       <section class="header__img">
-        <div class="header__logo">
-          <span class="header__logo-welcome"></span>
-          <span class="header__logo-sedona"></span>
-          <span class="header__logo-quote"></span>
-        </div>
+        <span class="header__logo-welcome"></span>
+        <span class="header__logo-sedona"></span>
+        <span class="header__logo-quote"></span>
       </section>
       <section class="header__about-sedona">
         <h1 class="header__desc-header">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
@@ -34,6 +37,7 @@
 
 
     <main class="main">
+      <div class="main__triangle"></div>
       <article class="benefit">
         <header class="benefit-head">
           <h2 class="benefit-head__header">Настоящий городок</h2>
@@ -44,17 +48,17 @@
         <section class="benefit__list-wrap">
           <ul class="benefit-list">
             <li class="benefit-list__item">
-              <span class="icon-home"></span>
+              <span class="benefit-list__ico ico-home"></span>
               <h3 class="benefit-list__header">Жилье</h3>
               <p class="benefit-list__desc">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </li>
-            <li class="benefit-desc__item">
-              <span class="icon-gift"></span>
+            <li class="benefit-list__item">
+              <span class="benefit-list__ico ico-gift"></span>
               <h3 class="benefit-list__header">Сувениры</h3>
               <p class="benefit-list__desc">Не только китайского, но и местного производства!</p>
             </li>
-            <li class="benefit-desc__item">
-              <span class="icon-food"></span>
+            <li class="benefit-list__item">
+              <span class="benefit-list__ico ico-food"></span>
               <h3 class="benefit-list__header">Еда</h3>
               <p class="benefit-list__desc">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
@@ -66,7 +70,7 @@
         <header class="benefit-head">
           <h2 class="benefit-head__header">Там есть мост дьявола</h2>
           <p class="benefit-head__number">- №2 -</p>
-          <p class="benefit-list__desc">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          <p class="benefit-head__desc">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </header>
         <figure class="benefit__img"></figure>
       </article>
@@ -74,31 +78,29 @@
         <header class="benefit-head">
           <h2 class="benefit-head__header">небольшая площадь</h2>
           <p class="benefit-head__number">- №3 -</p>
-          <p class="benefit-list__desc">Все достопримечательности находятся очень близко</p>
+          <p class="benefit-head__desc">Все достопримечательности находятся очень близко</p>
         </header>
       </article>
       <article class="benefit benefit--short">
         <header class="benefit-head">
           <h2 class="benefit-head__header">Красивая дорога</h2>
           <p class="benefit-head__number">- №4 -</p>
-          <p class="benefit-list__desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <p class="benefit-head__desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </header>
       </article>
       <article class="benefit benefit--short">
         <header class="benefit-head">
           <h2 class="benefit-head__header">Мало туристов</h2>
           <p class="benefit-head__number">- №5 -</p>
-          <p class="benefit-list__desc">Большинство едет в Гранд Каньон и толпится там</p>
+          <p class="benefit-head__desc">Большинство едет в Гранд Каньон и толпится там</p>
         </header>
       </article>
-      <article class="interested">
-        <div class="interested__wrap">
-          <p class="interested__header">Заинтересовались?</p>
-          <p class="interested__desc">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        </div>
+      <div class="interested">
+        <p class="interested__header">Заинтересовались?</p>
+        <p class="interested__desc">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <button class="btn-blue">Найти гостиницу</button>
-      </article>
-      <div class="map"></div>
+      </div>
+      <figure class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d84991.02858438992!2d30.566969652692105!3d50.420835001990326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sua!4v1444300582411" frameborder="0" style="border:0" allowfullscreen></iframe></figure>
     </main>
 
 
@@ -108,11 +110,11 @@
     <footer class="footer">
       <span class="tags">#visitsedona</span>
       <ul class="social-list">
-        <li class="social-list__item"></li>
-        <li class="social-list__item"></li>
-        <li class="social-list__item"></li>
+        <li class="social-list__item"><i class="ico ico-tw"></i></li>
+        <li class="social-list__item"><i class="ico ico-fb"></i></li>
+        <li class="social-list__item"><i class="ico ico-youtube"></i></li>
       </ul>
-      <div class="dev-by">Разработано <span class="dev-by__logo"></span></div>
+      <div class="dev-by">Разработано <span class="ico ico-devby"></span></div>
     </footer>
     <!-- <script src="js/script.js"></script> -->
 
