@@ -682,8 +682,7 @@ th {
 
 .response-header {
   text-transform: uppercase;
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5; }
+  text-align: center; }
   .response-header__img {
     width: 320px;
     background-image: url("../img/triangles.png"), url("../img/bg-header.jpg");
@@ -717,6 +716,40 @@ th {
     font-size: 14px;
     line-height: 24px;
     margin: 0; }
+
+.response-form {
+  text-transform: uppercase; }
+
+.person {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 20px;
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box; }
+  .person__head {
+    display: block;
+    padding-bottom: 9px;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0; }
+  .person__label {
+    display: block;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 13px; }
+  .person__input {
+    background-color: #f2f2f2;
+    font-weight: 700;
+    width: 100%;
+    border: none;
+    padding: 17px 20px;
+    font-size: 18px;
+    line-height: 20px;
+    display: block;
+    box-sizing: border-box; }
 
 body {
   font-family: 'PT Sans', sans-serif; }
