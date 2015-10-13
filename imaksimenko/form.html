@@ -41,102 +41,148 @@
       </section>
 
       <form class="response-form" name="response-form">
-        <fieldset class="fieldset person">
+
+
+
+        <fieldset class="person person--fieldset">
           <h2 class="person__head">Представьтесь, пожалуйста:</h2>
-          <label class="person__label" for="lastname">Фамилия:</label>
+          <label class="person__label" for="lastname">Фамилия:<span class="red-star"> *</span></label>
           <input class="person__input" type="text" name="lastname" id="lastname">
-          <label class="person__label" for="firstname">Имя:</label>
+          <label class="person__label" for="firstname">Имя:<span class="red-star"> *</span></label>
           <input class="person__input" type="text" name="firstname" id="firstname">
           <label class="person__label" for="patronymic">Отчество:</label>
           <input class="person__input" type="text" name="patronymic" id="patronymic">
         </fieldset>
-        <fieldset class="opinion">
+
+
+
+        <fieldset class="opinion opinion--fieldset">
           <h2 class="opinion__head">Ваше общее впечатление:</h2>
-          <input class="opinion__good-opinion-input" type="radio" name="opinion" value="good" id="good-opinion" checked>
-          <label class="opinion__good-opinion-label" for="good-opinion">Скорее положительное</label>
-          <input class="opinion__bad-opinion-input" type="radio" name="opinion" value="good" id="bad-opinion" checked>
-          <label class="opinion__bad-opinion-label" for="bad-opinion">Скорее отрицательное</label>
+          <input class="opinion__input" type="radio" name="opinion" value="good" id="good-opinion" checked>
+          <label class="opinion__label" for="good-opinion">Скорее положительное</label>
+          <input class="opinion__input" type="radio" name="opinion" value="good" id="bad-opinion">
+          <label class="opinion__label" for="bad-opinion">Скорее отрицательное</label>
         </fieldset>
-        <fieldset class="date">
+
+
+
+        <fieldset class="date date--fieldset">
           <h2 class="date__head">Даты Вашей поездки:</h2>
-          <label class="date__arrivalDate-label" for="arrivalDate">Дата приезда:</label>
-          <input class="date__arrivalDate-input" type="date" name="arrivalDate" id="arrivalDate">
+          <label class="date__label" for="arrivalDate">Дата приезда:<span class="red-star"> *</span></label>
+          <input class="date__input" type="date" name="arrivalDate" id="arrivalDate">
 
-          <label for="daysCounter">Длительность пребывания:</label>
+          <label class="date__label" for="daysCounter">Длительность пребывания:<span class="red-star"> *</span></label>
           <article class="counter" id="daysCounter">
-            <button class="btn-counter">+</button><span class="counter__days">14 дн.</span><button class="btn-counter">-</button>
+
+            <button class="counter__plus-minus">
+              <i class="ico-plus"></i>
+            </button>
+
+            <span class="counter__days">
+              <span>14</span><span>дн.</span>
+            </span>
+
+            <button class="counter__plus-minus">
+              <i class="ico-minus"></i>
+            </button>
+
           </article>
 
-          <label class="date__departureDate-label" for="departureDate">Дата отъезда:</label>
-          <input class="date__departureDate-input" type="date" name="departureDate" id="departureDate">
+          <label class="date__label" for="departureDate">Дата отъезда:<span class="red-star"> *</span></label>
+          <input class="date__input date__input--bordered" type="date" name="departureDate" id="departureDate">
         </fieldset>
-        <fieldset class="travelers">
+
+
+
+        <fieldset class="travelers travelers--fieldset">
           <h2 class="travelers__head">Кол-во путешественников:</h2>
-          <label for="travelersCounter">Кол-во путешественников:</label>
+          <label class="travelers__label" for="travelersCounter">Кол-во путешественников:<span class="red-star"> *</span></label>
+
           <article class="counter" id="travelersCounter">
-            <button class="btn-counter">+</button><span class="counter__days">2 чел.</span><button class="btn-counter">-</button>
+            <button class="counter__plus-minus">
+              <i class="ico-plus"></i>
+            </button>
+
+            <span class="counter__days">
+              <span>2</span><span>чел.</span>
+            </span>
+            
+            <button class="counter__plus-minus">
+              <i class="ico-minus"></i>
+            </button>
           </article>
 
-          <div class="travelers__wrap">
-            <div class="travelers__traveler-person">
-              <div class="travelers__col1">
-                <label class="travelers__number-label" for="traveler-number-1">№:</label>
-                <input class="travelers__number-input" type="text" name="traveler-number" id="traveler-number-1">
-              </div>
-              <div class="travelers__col2">
-                <label class="travelers__lastname-label" for="traveler-lastname-1">Фамилия:</label>
-                <input class="travelers__lastname-input" type="text" name="traveler-lastname" id="traveler-lastname-1">
-                <label class="travelers__firstname-label" for="traveler-firstname-1">Имя:</label>
-                <input class="travelers__firstname-input" type="text" name="traveler-firstname" id="firstname-lastname-1">
-                <label class="travelers__patronymic-label" for="traveler-patronymic-1">Отчество:</label>
-                <input class="travelers__patronymic-input" type="text" name="traveler-patronymic" id="traveler-patronymic-1">
-              </div>
+          <div class="travelers__traveler-person clearfix">
+            <div class="travelers__col1">
+              <span class="travelers__number">
+                <span>№</span>
+                <span>1</span>
+              </span>
             </div>
-            <div class="travelers__traveler-person">
-              <div class="travelers__col1">
-                <label class="travelers__number-label" for="traveler-number-2">№:</label>
-                <input class="travelers__number-input" type="text" name="traveler-number" id="traveler-number-2">
-              </div>
-              <div class="travelers__col2">
-                <label class="travelers__lastname-label" for="traveler-lastname-2">Фамилия:</label>
-                <input class="travelers__lastname-input" type="text" name="traveler-lastname" id="traveler-lastname-2">
-                <label class="travelers__firstname-label" for="traveler-firstname-2">Имя:</label>
-                <input class="travelers__firstname-input" type="text" name="traveler-firstname" id="firstname-lastname-2">
-                <label class="travelers__patronymic-label" for="traveler-patronymic-2">Отчество:</label>
-                <input class="travelers__patronymic-input" type="text" name="traveler-patronymic" id="traveler-patronymic-2">
-              </div>
+            <div class="travelers__col2">
+              <label class="travelers__label" for="traveler-lastname-1">Фамилия:<span class="red-star"> *</span></label>
+              <input class="travelers__input" type="text" name="traveler-lastname" id="traveler-lastname-1">
+              <label class="travelers__label" for="traveler-firstname-1">Имя:<span class="red-star"> *</span></label>
+              <input class="travelers__input" type="text" name="traveler-firstname" id="firstname-lastname-1">
+              <label class="travelers__label" for="traveler-patronymic-1">Отчество:</label>
+              <input class="travelers__input" type="text" name="traveler-patronymic" id="traveler-patronymic-1">
+            </div>
+          </div>
+          <div class="travelers__traveler-person clearfix">
+            <div class="travelers__col1">
+              <span class="travelers__number">
+                <span>№</span>
+                <span>2</span>
+              </span>
+            </div>
+            <div class="travelers__col2">
+              <label class="travelers__label" for="traveler-lastname-1">Фамилия:<span class="red-star"> *</span></label>
+              <input class="travelers__input" type="text" name="traveler-lastname" id="traveler-lastname-1">
+              <label class="travelers__label" for="traveler-firstname-1">Имя:<span class="red-star"> *</span></label>
+              <input class="travelers__input" type="text" name="traveler-firstname" id="firstname-lastname-1">
+              <label class="travelers__label" for="traveler-patronymic-1">Отчество:</label>
+              <input class="travelers__input" type="text" name="traveler-patronymic" id="traveler-patronymic-1">
             </div>
           </div>
         </fieldset>
-        <fieldset class="places">
+
+
+
+        <fieldset class="places places--fieldset">
           <h2 class="places__head">Посещенные достопримечательности:</h2>
-          <label>
-            <input type="checkbox" name="place" value="bridge" checked>Мост дьявола
-          </label>
-          <label>
-            <input type="checkbox" name="place" value="park">Слайд-парк
-          </label>
-          <label>
-            <input type="checkbox" name="place" value="mountain" checked>Гора-Колокол
-          </label>
-          <label>
-            <input type="checkbox" name="place" value="rock" checked>Красные скалы
-          </label>
+
+          <input class="places__input" type="checkbox" name="place" value="bridge" id="bridge" checked>
+          <label class="places__label" for="bridge">Мост дьявола</label>
+
+          <input class="places__input" type="checkbox" name="place" value="park" id="park">
+          <label class="places__label" for="park">Слайд-парк</label>
+
+          <input class="places__input" type="checkbox" name="place" value="mountain" id="mountain" checked>
+          <label class="places__label" for="mountain">Гора-Колокол</label>
+
+          <input class="places__input" type="checkbox" name="place" value="rock" id="rock" checked>
+          <label class="places__label" for="rock">Красные скалы</label>
         </fieldset>
-        <article class="upload-photos">
-          <h2>Загрузите фотографии:</h2>
+
+
+
+        <fieldset class="upload-photos upload-hotos--fieldset">
+          <h2 class="upload-photos__head">Загрузите фотографии:</h2>
           <button class="btn-grey">Выбрать фотографии</button>
-          <section class="photos">
-            <figure class="photos__item"><button class="btn-del">x</button></figure>
-            <figure class="photos__item"><button class="btn-del">x</button></figure>
-            <figure class="photos__item"><button class="btn-del">x</button></figure>
-            <figure class="photos__item"><button class="btn-del">x</button></figure>
-            <figure class="photos__item"><button class="btn-del">x</button></figure>
-            <figure class="photos__item"><button class="btn-del">x</button></figure>
-            <figure class="photos__item"><button class="btn-del">x</button></figure>
-          </section>
-        </article>
-        <input class="btn-submit" type="submit" value="Отправить отзыв">
+          <div class="photos">
+            <figure class="photos__item"><i class="ico ico-del"></i><img src="./img/photo1.jpg" alt=""></figure>
+            <figure class="photos__item"><i class="ico ico-del"></i><img src="./img/photo1.jpg" alt=""></figure>
+            <figure class="photos__item"><i class="ico ico-del"></i><img src="./img/photo1.jpg" alt=""></figure>
+            <figure class="photos__item"><i class="ico ico-del"></i><img src="./img/photo1.jpg" alt=""></figure>
+            <figure class="photos__item"><i class="ico ico-del"></i><img src="./img/photo1.jpg" alt=""></figure>
+            <figure class="photos__item"><i class="ico ico-del"></i><img src="./img/photo1.jpg" alt=""></figure>
+            <figure class="photos__item"><i class="ico ico-del"></i><img src="./img/photo1.jpg" alt=""></figure>
+          </div>
+        </fieldset>
+        
+        <div class="submit-wrap">
+          <input class="btn-blue" type="submit" value="Отправить отзыв">
+        </div>
       </form>
     </main>
 

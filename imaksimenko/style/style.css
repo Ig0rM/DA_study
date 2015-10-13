@@ -354,8 +354,10 @@ th {
   padding: 0; }
 
 .btn-blue {
-  padding-left: 44px;
-  padding-right: 44px;
+  min-width: 280px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 14px;
   padding-bottom: 15px;
   text-transform: uppercase;
@@ -365,6 +367,24 @@ th {
   font-weight: 700;
   color: #ffffff;
   background-color: #81b3d2; }
+
+.btn-grey {
+  min-width: 280px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 14px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  border: none;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #c6c6c6;
+  background-color: #f2f2f2; }
+
+.ico {
+  cursor: pointer; }
 
 .ico-close {
   display: inline-block;
@@ -443,6 +463,30 @@ th {
   width: 31px;
   height: 37px;
   background-position: -105px -46px; }
+
+.ico-plus {
+  display: inline-block;
+  vertical-align: top;
+  background: url("../img/icon-sprite.png") no-repeat;
+  width: 20px;
+  height: 20px;
+  background-position: -5px -150px; }
+
+.ico-minus {
+  display: inline-block;
+  vertical-align: top;
+  background: url("../img/icon-sprite.png") no-repeat;
+  width: 20px;
+  height: 20px;
+  background-position: -45px -141px; }
+
+.ico-del {
+  display: inline-block;
+  vertical-align: top;
+  background: url("../img/icon-sprite.png") no-repeat;
+  width: 30px;
+  height: 30px;
+  background-position: -80px -147px; }
 
 .header {
   min-width: 320px;
@@ -720,7 +764,13 @@ th {
 .response-form {
   text-transform: uppercase; }
 
-.person {
+.person--fieldset,
+.opinion--fieldset,
+.date--fieldset,
+.travelers--fieldset,
+.places--fieldset,
+.upload-hotos--fieldset,
+.submit-wrap {
   font-size: 14px;
   line-height: 16px;
   padding: 20px;
@@ -729,27 +779,250 @@ th {
   width: 320px;
   margin: 0 auto;
   box-sizing: border-box; }
-  .person__head {
+
+.red-star {
+  color: #ff2626; }
+
+.person__head {
+  text-align: center;
+  display: block;
+  padding-bottom: 9px;
+  font-size: 18px;
+  line-height: 20px;
+  margin: 0; }
+.person__label {
+  display: block;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 13px; }
+.person__input {
+  background-color: #f2f2f2;
+  font-weight: 700;
+  width: 100%;
+  border: none;
+  padding: 17px 20px;
+  font-size: 18px;
+  line-height: 20px;
+  display: block;
+  box-sizing: border-box; }
+
+.opinion__head {
+  text-align: center;
+  display: block;
+  padding-bottom: 14px;
+  font-size: 18px;
+  line-height: 20px;
+  margin: 0; }
+.opinion__input {
+  display: none; }
+.opinion__label {
+  margin-top: 13px;
+  display: block;
+  padding-left: 78px;
+  position: relative;
+  height: 56px;
+  font-size: 18px;
+  line-height: 56px;
+  text-transform: none;
+  font-weight: 700; }
+  .opinion__label::before {
+    cursor: pointer;
+    content: "";
     display: block;
-    padding-bottom: 9px;
+    width: 56px;
+    height: 56px;
+    background: url("../img/icon-sprite.png") no-repeat;
+    background-position: -65px -84px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+.opinion .opinion__input:checked + .opinion__label::before {
+  cursor: pointer;
+  content: "";
+  display: block;
+  width: 56px;
+  height: 56px;
+  background: url("../img/icon-sprite.png") no-repeat;
+  background-position: -2px -84px;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.date__head {
+  text-align: center;
+  display: block;
+  padding-bottom: 14px;
+  font-size: 18px;
+  line-height: 20px;
+  margin: 0; }
+.date__label {
+  display: block;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 13px; }
+.date__input {
+  background-color: #f2f2f2;
+  font-weight: 700;
+  width: 100%;
+  border: none;
+  padding: 17px 20px;
+  font-size: 18px;
+  line-height: 20px;
+  display: block;
+  box-sizing: border-box; }
+  .date__input--bordered {
+    border: 2px solid #b8b8b8; }
+
+.counter {
+  text-align: center;
+  font-size: 0; }
+  .counter__plus-minus {
+    vertical-align: top;
+    width: 58px;
+    height: 58px;
+    padding: 0;
+    border: none;
+    background-color: #f2f2f2; }
+  .counter__days {
+    padding: 19px 22px 19px 22px;
+    margin-right: 9px;
+    margin-left: 9px;
+    font-size: 18px;
+    line-height: 20px;
+    width: 145px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #f2f2f2; }
+    .counter__days > span:first-child {
+      float: left;
+      font-weight: 700; }
+    .counter__days > span:last-child {
+      float: right;
+      text-transform: lowercase;
+      color: #c0c0c0; }
+
+.travelers__head {
+  text-align: center;
+  display: block;
+  padding-bottom: 14px;
+  font-size: 18px;
+  line-height: 20px;
+  margin: 0; }
+.travelers__col1 {
+  float: left; }
+.travelers__number span:first-of-type {
+  text-align: center;
+  font-size: 14px;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 13px; }
+.travelers__number span:last-of-type {
+  padding: 21px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  vertical-align: top;
+  display: block;
+  box-sizing: border-box;
+  width: 58px;
+  height: 58px;
+  border: none;
+  background-color: #f2f2f2; }
+.travelers__col2 {
+  width: 212px;
+  float: right; }
+.travelers__label {
+  display: block;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 13px; }
+.travelers__input {
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  font-weight: 700;
+  width: 100%;
+  border: none;
+  padding: 17px 20px;
+  font-size: 18px;
+  line-height: 20px;
+  display: block; }
+
+.places__head {
+  text-align: center;
+  display: block;
+  padding-bottom: 14px;
+  font-size: 18px;
+  line-height: 20px;
+  margin: 0; }
+.places__input {
+  display: none; }
+.places__label {
+  margin-top: 13px;
+  display: block;
+  padding-left: 78px;
+  position: relative;
+  height: 56px;
+  font-size: 18px;
+  line-height: 56px;
+  text-transform: none;
+  font-weight: 700; }
+  .places__label::before {
+    cursor: pointer;
+    content: "";
+    display: block;
+    width: 57px;
+    height: 56px;
+    background: url("../img/icon-sprite.png") no-repeat;
+    background-position: -67px -184px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+.places .places__input:checked + .places__label::before {
+  cursor: pointer;
+  content: "";
+  display: block;
+  width: 57px;
+  height: 56px;
+  background: url("../img/icon-sprite.png") no-repeat;
+  background-position: -2px -184px;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.upload-photos {
+  font-size: 0; }
+  .upload-photos__head {
+    text-align: center;
+    display: block;
+    padding-bottom: 22px;
     font-size: 18px;
     line-height: 20px;
     margin: 0; }
-  .person__label {
-    display: block;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-bottom: 13px; }
-  .person__input {
-    background-color: #f2f2f2;
-    font-weight: 700;
-    width: 100%;
-    border: none;
-    padding: 17px 20px;
-    font-size: 18px;
-    line-height: 20px;
-    display: block;
-    box-sizing: border-box; }
+
+.photos {
+  text-align: center; }
+  .photos__item {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    padding-top: 35px;
+    margin: 0px 35px 0px 0px;
+    display: inline-block;
+    float: left; }
+    .photos__item:nth-of-type(3n) {
+      margin-right: 0px; }
+    .photos__item img {
+      width: 100%;
+      height: 100%; }
+    .photos__item .ico {
+      top: 19px;
+      left: 20px;
+      position: absolute; }
+
+.submit-wrap {
+  padding-top: 28px;
+  padding-bottom: 80px;
+  border: none; }
 
 body {
   font-family: 'PT Sans', sans-serif; }
